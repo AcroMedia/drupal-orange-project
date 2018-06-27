@@ -35,6 +35,47 @@ The `composer create-project` command passes ownership of all files to the
 project that is created. You should create a new git repository, and commit 
 all files not excluded by the .gitignore file.
 
+## Orange Profiles
+
+> Some documentation to help you get started.
+
+Starting a Drupal build with Drupal Commerce?
+* [Orange E-Commerce Profile](https://github.com/AcroMedia/orange_ecom_profile/blob/8.x-1.x/README.md)
+* [Orange E-Commerce Starter Theme](https://github.com/AcroMedia/orange_ecom_starter/blob/8.x-1.x/README.md)
+
+Starting a Drupal build that doesn't need Drupal Commerce?
+* [Orange Profile](https://github.com/AcroMedia/orange_profile/blob/8.x-1.x/README.md)
+* [Orange Starter Theme](https://github.com/AcroMedia/orange_starter/blob/8.x-1.x/README.md)
+
+## Applied Patches
+
+* Drupal Core
+  * [Issue](https://www.drupal.org/project/drupal/issues/2771837) | [Patch](https://www.drupal.org/files/issues/drupalimage_ckeditor-2771837-17.patch) - Problem with CKEditor not maintain data-entity attributes.
+* Fivestar
+  * [Issue](https://www.drupal.org/project/fivestar/issues/2920834) | [Patch](https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch) - JS error preventing clicking on stars.
+  * [Issue](https://www.drupal.org/project/fivestar/issues/2919915) | [Patch](https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch) - Comments with ratings have clickable ratings for other users.
+
+## Applied Web Libraries
+
+- [CKEditor Media Embed Plugin](https://www.drupal.org/project/ckeditor_media_embed)
+  - `ckeditor/ckeditor`
+  - `/web/libraries/ckeditor`
+- [CKEditor Color Button](https://www.drupal.org/project/colorbutton)
+  - `ckeditor/colorbutton`
+  - `/web/libraries/colorbutton`
+- [CKEditor Font](https://www.drupal.org/project/ckeditor_font)
+  - `ckeditor/font`
+  - `/web/libraries/font`
+- [CKEditor Panel Button](https://www.drupal.org/project/panelbutton)
+  - `ckeditor/panelbutton`
+  - `/web/libraries/panelbutton`
+- [Spectrum for Color Field](https://www.drupal.org/project/color_field)
+  - `bgrins/spectrum`
+  - `/web/libraries/spectrum`
+- [Magnific Popup](https://www.drupal.org/project/magnific_popup)
+  - `dimsemenov/magnific-popup`
+  - `/web/libraries/magnific-popup`  
+
 ## What does the template do?
 
 When installing the given `composer.json` some tasks are taken care of:
