@@ -172,6 +172,12 @@
         "type:drupal-drush"
       ]
     },
+    "drupal-scaffold": {
+      "initial": {
+        ".editorconfig": "../.editorconfig",
+        ".gitattributes": "../.gitattributes"
+      }
+    },
     "patches": {
       "drupal/core": {
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/drupalimage_ckeditor-2771837-17.patch"
