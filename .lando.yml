@@ -1,0 +1,45 @@
+name: drupal-orange-project
+recipe: drupal8
+config:
+  webroot: web
+  xdebug: true
+
+services:
+  index:
+    # Use solr version 7.1
+    type: solr:7.1
+
+   # Lando will dynamically assign a port and will give you a different port each time you restart your app
+    portforward: true
+
+    # Optionally declare the name of the solr core.
+    # This setting is only applicable for versions 5.5 and above
+    core: orange_solr
+
+    # Optionally use custom solr config files eg (schema.xml and solrconfig.xml)
+    # This is helpful if frameworks require custom config eg Drupal.
+    # This is relative to the app root (which may be different from your webroot).
+    config:
+      conf: web/modules/contrib/search_api_solr/solr-conf/7.x
+
+  node:
+    type: node:8.9
+    run:
+      - cd $LANDO_MOUNT && lando npm install gulp gulp-sass
+      
+    globals:
+      gulp-cli: "latest"
+proxy:
+  appserver:
+    - drupal-orange-project.lndo.site
+
+  # Lets get a nice lndo url for the solr web interface
+  index:
+    - solr.drupal-orange-project.lndo.site:
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+  gulp:
+    service: node
