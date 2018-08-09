@@ -10,11 +10,6 @@ config:
   # See: https://www.drupal.org/docs/7/system-requirements/web-server
   via: nginx
 
-  # This will install the Drush Launcher (https://github.com/drush-ops/drush-launcher)
-  # and will delegate to the site-local version of Drush you've installed with Composer
-  # http://docs.drush.org/en/master/install/
-  drush: composer
-
   # DataBase - Optional - Default latest mysql.
   # database: mysql
   #   type: 8
@@ -39,8 +34,8 @@ services:
     # Optionally declare the name of the solr core.
     core: orange_solr
 
-    # Dynamically assign an external port each time you start your app
-    portforward: true
+    # Dynamically assign a port each time you start your app
+    portforward: true 
 
     # Optionally use custom solr config files eg (schema.xml and solrconfig.xml)
     # This is helpful if frameworks require custom config eg Drupal.
@@ -49,23 +44,24 @@ services:
       conf: web/modules/contrib/search_api_solr/solr-conf/7.x
 
 
-  # node default version 8.9
+  # node default version 8.9 
   # https://docs.devwithlando.io/services/node.html
   node:
     type: node
-   run:
+    run: 
       # Installs all requirements for orange_framework/gulpfile.js
       # This should probably be done in a package.json and package.lock in the orange_framework
       - cd $LANDO_MOUNT
-      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename
+      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename 
       - npm install gulp-postcss postcss-easysprites autoprefixer gulp-cli
       
 
-  mailhog:
+  mailhog: 
     type: mailhog
     hogfrom:
       - appserver
     portforward: true
+
 
 proxy:
   index:
@@ -73,7 +69,8 @@ proxy:
 
   mailhog:
     - mail.drupal-orange-project.lndo.site
-   
+
+
 tooling:
   node:
    service: node
@@ -81,10 +78,3 @@ tooling:
     service: node
   gulp:
     service: node
-
-
-
-
-
-
-
