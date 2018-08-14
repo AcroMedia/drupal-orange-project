@@ -1,0 +1,80 @@
+name: drupal-orange-project
+recipe: drupal8
+config:
+
+  # php - Optional - Default is latest php supported by Drupal 8.
+  # See: https://www.drupal.org/docs/8/system-requirements/php-requirements
+  php: '7.1'
+
+  # nginx - Optional - Default Apache
+  # See: https://www.drupal.org/docs/7/system-requirements/web-server
+  via: nginx
+
+  # DataBase - Optional - Default latest mysql.
+  # database: mysql
+  #   type: 8
+
+  # webroot - Optional - Location of webroot relative to your approot.
+  # If ommitted this will be your approot itself.
+  webroot: web
+
+  # xdebug - Optional
+  # If you are having trouble getting xdebug to work please see:
+  # https://docs.devwithlando.io/services/php.html#using-xdebug
+  xdebug: true
+
+
+services:
+
+  # Solr default version 7.1
+  # Supported Versions: https://docs.devwithlando.io/services/solr.html
+  index:
+    type: solr
+
+    # Optionally declare the name of the solr core.
+    core: orange_solr
+
+    # Dynamically assign a port each time you start your app
+    portforward: true 
+
+    # Optionally use custom solr config files eg (schema.xml and solrconfig.xml)
+    # This is helpful if frameworks require custom config eg Drupal.
+    # This is relative to the app root (may be different from your webroot).
+    config:
+      conf: web/modules/contrib/search_api_solr/solr-conf/7.x
+
+
+  # node default version 8.9 
+  # https://docs.devwithlando.io/services/node.html
+  node:
+    type: node
+    run: 
+      # Installs all requirements for orange_framework/gulpfile.js
+      # This should probably be done in a package.json and package.lock in the orange_framework
+      - cd $LANDO_MOUNT
+      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename 
+      - npm install gulp-postcss postcss-easysprites autoprefixer gulp-cli
+      
+
+  mailhog: 
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: true
+
+
+proxy:
+  index:
+    - solr.drupal-orange-project.lndo.site:8983
+
+  mailhog:
+    - mail.drupal-orange-project.lndo.site
+
+
+tooling:
+  node:
+   service: node
+  npm:
+    service: node
+  gulp:
+    service: node
