@@ -89,6 +89,19 @@
     {
       "type": "package",
       "package": {
+        "name": "recurser/jquery-simple-color",
+        "type": "drupal-library",
+        "version": "master",
+        "source": {
+          "url": "https://github.com/recurser/jquery-simple-color",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "dimsemenov/magnific-popup",
         "type": "drupal-library",
         "version": "master",
@@ -96,6 +109,19 @@
           "url": "https://github.com/dimsemenov/Magnific-Popup",
           "type": "git",
           "reference": "origin/master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "simeydotme/jquery-ui-slider-pips",
+        "type": "drupal-library",
+        "version": "v1.11.3",
+        "source": {
+          "url": "https://github.com/simeydotme/jQuery-ui-Slider-Pips",
+          "type": "git",
+          "reference": "v1.11.3"
         }
       }
     }
@@ -109,6 +135,8 @@
     "ckeditor/colorbutton": "4.7.3",
     "ckeditor/font": "4.7.3",
     "ckeditor/panelbutton": "4.7.3",
+    "recurser/jquery-simple-color": "master",
+    "simeydotme/jquery-ui-slider-pips": "v1.11.3",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
     "drupal-composer/drupal-scaffold": "^2.5",
