@@ -51,6 +51,9 @@ Starting a Drupal build that doesn't need Drupal Commerce?
 
 * Drupal Core
   * [Issue](https://www.drupal.org/project/drupal/issues/2771837) | [Patch](https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch) - Problem with CKEditor not maintain data-entity attributes.
+* Drupal Commerce
+  * [Issue](https://www.drupal.org/project/commerce/issues/2859834) | [Patch](https://www.drupal.org/files/issues/2018-03-22/progress-links-2859834-20.patch) - Allow checkout progress to link to previous steps
+  * [Issue](https://www.drupal.org/project/commerce/issues/2938760) | [Patch](https://www.drupal.org/files/issues/2018-06-29/2938760-add_variation_field_wrapper-13.patch) - Variation fields can permanently disappear during ajax replacement
 * Fivestar
   * [Issue](https://www.drupal.org/project/fivestar/issues/2920834) | [Patch](https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch) - JS error preventing clicking on stars.
   * [Issue](https://www.drupal.org/project/fivestar/issues/2919915) | [Patch](https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch) - Comments with ratings have clickable ratings for other users.

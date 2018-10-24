@@ -142,7 +142,7 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.6.0",
-    "drush/drush": "^9.0.0",
+    "drush/drush": "9.0.0",
     "ext-curl": "*",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3"
@@ -212,6 +212,10 @@
     "patches": {
       "drupal/core": {
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
+      },
+      "drupal/commerce": {
+        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2018-03-22/progress-links-2859834-20.patch",
+        "Variation fields can permanently disappear during ajax replacement": "https://www.drupal.org/files/issues/2018-06-29/2938760-add_variation_field_wrapper-13.patch"
       },
       "drupal/fivestar": {
         "No click operations on the star": "https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch",
