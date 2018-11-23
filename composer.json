@@ -215,7 +215,7 @@
       },
       "drupal/commerce": {
         "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2018-03-22/progress-links-2859834-20.patch",
-        "Variation fields can permanently disappear during ajax replacement": "https://www.drupal.org/files/issues/2018-10-31/2938760-20.patch"
+        "Variation fields can permanently disappear during ajax replacement": "https://www.drupal.org/files/issues/2018-11-20/commerce-2938760-empty_variation_fields-21.patch"
       },
       "drupal/fivestar": {
         "No click operations on the star": "https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch",
