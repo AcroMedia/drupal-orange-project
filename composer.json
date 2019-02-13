@@ -142,7 +142,7 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.6.0",
-    "drush/drush": "^9",
+    "drush/drush": "^9.5",
     "ext-curl": "*",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3"
