@@ -142,14 +142,14 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.6.0",
-    "drush/drush": "9.0.0",
+    "drush/drush": "^9",
     "ext-curl": "*",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.6.0",
-    "drupal/devel": "1.x-dev"
+    "drupal/devel": "^2",
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -158,7 +158,8 @@
   "prefer-stable": true,
   "config": {
     "bin-dir": "bin",
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {"php": "7.2"}
   },
   "autoload": {
     "classmap": [
@@ -214,7 +215,7 @@
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
       },
       "drupal/commerce": {
-        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2018-03-22/progress-links-2859834-20.patch",
+        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2019-02-13/2859834-24.patch",
         "Add a widget setting to define whether to disable product variation attributes with a single value.": "https://www.drupal.org/files/issues/2018-12-12/3020173-2.patch"
       },
       "drupal/fivestar": {
