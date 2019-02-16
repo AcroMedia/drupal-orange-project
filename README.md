@@ -52,8 +52,7 @@ Starting a Drupal build that doesn't need Drupal Commerce?
 * Drupal Core
   * [Issue](https://www.drupal.org/project/drupal/issues/2771837) | [Patch](https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch) - Problem with CKEditor not maintain data-entity attributes.
 * Drupal Commerce
-  * [Issue](https://www.drupal.org/project/commerce/issues/2859834) | [Patch](https://www.drupal.org/files/issues/2018-03-22/progress-links-2859834-20.patch) - Allow checkout progress to link to previous steps
-  * [Issue](https://www.drupal.org/project/commerce/issues/3020173) | [Patch](https://www.drupal.org/files/issues/2018-12-12/3020173-2.patch) - Add a widget setting to define whether to disable product variation attributes with a single value.
+  * [Issue](https://www.drupal.org/project/commerce/issues/2859834) | [Patch](https://www.drupal.org/files/issues/2019-02-13/2859834-24.patch) - Allow checkout progress to link to previous steps
 * Fivestar
   * [Issue](https://www.drupal.org/project/fivestar/issues/2920834) | [Patch](https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch) - JS error preventing clicking on stars.
   * [Issue](https://www.drupal.org/project/fivestar/issues/2919915) | [Patch](https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch) - Comments with ratings have clickable ratings for other users.
