@@ -7,7 +7,7 @@ config:
   php: '7.1'
 
   # nginx - Optional - Default Apache
-  # See: https://www.drupal.org/docs/7/system-requirements/web-server
+  # See: https://www.drupal.org/docs/8/system-requirements/web-server
   via: nginx
 
   # DataBase - Optional - Default latest mysql.

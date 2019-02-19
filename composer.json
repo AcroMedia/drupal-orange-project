@@ -145,11 +145,12 @@
     "drush/drush": "^9.5",
     "ext-curl": "*",
     "webflo/drupal-finder": "^1.0.0",
-    "webmozart/path-util": "^2.3"
+    "webmozart/path-util": "^2.3",
+    "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.6.0",
-    "drupal/devel": "^2",
+    "drupal/devel": "^2"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -181,6 +182,7 @@
     ]
   },
   "extra": {
+    "composer-exit-on-patch-failure": true,
     "patchLevel": {
       "drupal/core": "-p2"
     },
@@ -215,8 +217,7 @@
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
       },
       "drupal/commerce": {
-        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2019-02-13/2859834-24.patch",
-        "Add a widget setting to define whether to disable product variation attributes with a single value.": "https://www.drupal.org/files/issues/2018-12-12/3020173-2.patch"
+        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2019-02-13/2859834-24.patch"
       },
       "drupal/fivestar": {
         "No click operations on the star": "https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch",
