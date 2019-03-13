@@ -142,8 +142,9 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.6.0",
-    "drush/drush": "9.0.0",
+    "drush/drush": "^9.0.0",
     "ext-curl": "*",
+    "twig/twig": "1.37.1",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
     "zaporylie/composer-drupal-optimizations": "^1.0"
@@ -214,9 +215,6 @@
     "patches": {
       "drupal/core": {
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
-      },
-      "drupal/commerce": {
-        "Allow checkout progress to link to previous steps": "https://www.drupal.org/files/issues/2019-02-13/2859834-24.patch"
       },
       "drupal/fivestar": {
         "No click operations on the star": "https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch",
