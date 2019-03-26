@@ -216,7 +216,6 @@
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
       },
       "drupal/fivestar": {
-        "No click operations on the star": "https://www.drupal.org/files/issues/uncaught_typeerror-2920834-2.patch",
         "Comments with ratings have clickable ratings for other users": "https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch"
       }
     }
