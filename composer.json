@@ -142,7 +142,7 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.7.0",
-    "drush/drush": "^9.0.0",
+    "drush/drush": "^9.5",
     "ext-curl": "*",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
@@ -159,7 +159,10 @@
   "prefer-stable": true,
   "config": {
     "bin-dir": "bin",
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "7.2"
+    }
   },
   "autoload": {
     "classmap": [
