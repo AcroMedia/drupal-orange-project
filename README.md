@@ -53,6 +53,10 @@ Starting a Drupal build that doesn't need Drupal Commerce?
   * [Issue](https://www.drupal.org/project/drupal/issues/2771837) | [Patch](https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch) - Problem with CKEditor not maintain data-entity attributes.
 * Fivestar
   * [Issue](https://www.drupal.org/project/fivestar/issues/2919915) | [Patch](https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch) - Comments with ratings have clickable ratings for other users.
+* CKEditor Font Size and Family
+  * [Issue](https://www.drupal.org/project/ckeditor_font/issues/2729087) | [Patch](https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch) - Path to plugin is incorrect unless base path is /.
+* CKEditor Color Button
+  * [Issue](https://www.drupal.org/project/colorbutton/issues/2881822) | [Patch](https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch) - Module can't find library in profile directory.
 
 ## Applied Web Libraries
 

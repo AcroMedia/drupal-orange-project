@@ -158,7 +158,6 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
-    "bin-dir": "bin",
     "sort-packages": true,
     "platform": {
       "php": "7.2"
@@ -220,6 +219,12 @@
       },
       "drupal/fivestar": {
         "Comments with ratings have clickable ratings for other users": "https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch"
+      },
+      "drupal/ckeditor_font": {
+        "Path to plugin is incorrect unless base path is /": "https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch"
+      },
+      "drupal/colorbutton": {
+        "Module can't find library in profile directory": "https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch"
       }
     }
   }
