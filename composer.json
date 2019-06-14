@@ -66,9 +66,9 @@
       "package": {
         "name": "ckeditor/ckeditor",
         "type": "drupal-library",
-        "version": "4.5",
+        "version": "4.11.4",
         "dist": {
-          "url": "https://github.com/ckeditor/ckeditor-dev/archive/release/4.5.x.zip",
+          "url": "https://github.com/ckeditor/ckeditor-dev/archive/4.11.4.zip",
           "type": "zip"
         }
       }
@@ -131,7 +131,7 @@
     "acromedia/orange_ecom_profile": "dev-8.x-1.x",
     "dimsemenov/magnific-popup": "master",
     "bgrins/spectrum": "master",
-    "ckeditor/ckeditor": "4.5",
+    "ckeditor/ckeditor": "4.11.4",
     "ckeditor/colorbutton": "4.7.3",
     "ckeditor/font": "4.7.3",
     "ckeditor/panelbutton": "4.7.3",
