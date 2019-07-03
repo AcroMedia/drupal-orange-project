@@ -217,9 +217,6 @@
       "drupal/core": {
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
       },
-      "drupal/fivestar": {
-        "Comments with ratings have clickable ratings for other users": "https://www.drupal.org/files/issues/comments_with_ratings-2919915-3.patch"
-      },
       "drupal/ckeditor_font": {
         "Path to plugin is incorrect unless base path is /": "https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch"
       },
