@@ -222,9 +222,6 @@
       },
       "drupal/colorbutton": {
         "Module can't find library in profile directory": "https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch"
-      },
-      "drupal/paragraphs": {
-        "Make paragraphs module working with field_group version 3.x": "https://www.drupal.org/files/issues/2907094_7_field_group_support.patch"
       }
     }
   }

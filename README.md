@@ -55,8 +55,6 @@ Starting a Drupal build that doesn't need Drupal Commerce?
   * [Issue](https://www.drupal.org/project/ckeditor_font/issues/2729087) | [Patch](https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch) - Path to plugin is incorrect unless base path is /.
 * CKEditor Color Button
   * [Issue](https://www.drupal.org/project/colorbutton/issues/2881822) | [Patch](https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch) - Module can't find library in profile directory.
-* Paragraphs
-  * [Issue](https://www.drupal.org/project/paragraphs/issues/2907094) | [Patch](https://www.drupal.org/files/issues/2907094_7_field_group_support.patch) - Make paragraphs module working with field_group version 3.x with support for the field_layout module.
 
 ## Applied Web Libraries
 
