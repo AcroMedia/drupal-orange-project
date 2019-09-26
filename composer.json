@@ -127,23 +127,23 @@
     }
   ],
   "require": {
-    "acromedia/orange_profile": "dev-8.x-1.x",
+    "ext-curl": "*",
     "acromedia/orange_ecom_profile": "dev-8.x-1.x",
-    "dimsemenov/magnific-popup": "master",
+    "acromedia/orange_profile": "dev-8.x-1.x",
     "bgrins/spectrum": "master",
     "ckeditor/ckeditor": "4.11.4",
     "ckeditor/colorbutton": "4.7.3",
     "ckeditor/font": "4.7.3",
     "ckeditor/panelbutton": "4.7.3",
-    "recurser/jquery-simple-color": "master",
-    "simeydotme/jquery-ui-slider-pips": "v1.11.3",
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "^1.6.5",
+    "dimsemenov/magnific-popup": "master",
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "^8.7.0",
     "drush/drush": "^9.5",
-    "ext-curl": "*",
+    "recurser/jquery-simple-color": "master",
+    "simeydotme/jquery-ui-slider-pips": "v1.11.3",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
     "zaporylie/composer-drupal-optimizations": "^1.0"
@@ -222,6 +222,12 @@
       },
       "drupal/colorbutton": {
         "Module can't find library in profile directory": "https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch"
+      },
+      "drupal/color_field": {
+        "No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev": "https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch"
+      },
+      "drupal/commerce_google_tag_manager": {
+        "Use product variation SKU if available instead of product ID": "https://www.drupal.org/files/issues/2019-07-10/use-product-variation-sku-if-available-3066949-2.patch"
       }
     }
   }
