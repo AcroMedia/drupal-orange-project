@@ -154,6 +154,7 @@ achieve that by registering `@composer drupal:scaffold` as post-install and post
     ]
 },
 ```
+
 ### How can I apply patches to downloaded modules?
 
 If you need to apply patches (depending on the project being modified, a pull 
@@ -162,6 +163,7 @@ request is often a better solution), you can do so with the
 
 To add a patch to drupal module foobar insert the patches section in the extra 
 section of composer.json:
+
 ```json
 "extra": {
     "patches": {
@@ -171,18 +173,22 @@ section of composer.json:
     }
 }
 ```
+
 ### How do I switch from packagist.drupal-composer.org to packages.drupal.org?
 
 Follow the instructions in the [documentation on drupal.org](https://www.drupal.org/docs/develop/using-composer/using-packagesdrupalorg).
 
-### How do I specify a PHP version ?
+### How do I specify a PHP version?
 
-Currently Drupal 8 supports PHP 5.5.9 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7+.
+This project supports PHP 7.2 as minimum version (see [Drupal 8 PHP requirements](https://www.drupal.org/docs/8/system-requirements/drupal-8-php-requirements)), however it's possible that a `composer update` will upgrade some package that will then require PHP 7+.
 
 To prevent this you can add this code to specify the PHP version you want to use in the `config` section of `composer.json`:
+
 ```json
 "config": {
     "sort-packages": true,
-    "platform": {"php": "5.5.9"}
+    "platform": {
+        "php": "7.3"
+    }
 },
 ```

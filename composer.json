@@ -203,7 +203,7 @@
       "web/themes/contrib/{$name}": [
         "type:drupal-theme"
       ],
-      "drush/Commands/{$name}": [
+      "drush/Commands/contrib/{$name}": [
         "type:drupal-drush"
       ]
     },
