@@ -227,7 +227,7 @@
         "No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev": "https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch"
       },
       "drupal/commerce_google_tag_manager": {
-        "Use product variation SKU if available instead of product ID": "https://www.drupal.org/files/issues/2019-07-10/use-product-variation-sku-if-available-3066949-5.patch"
+        "Use product variation SKU if available instead of product ID": "https://www.drupal.org/files/issues/2019-07-10/use-product-variation-sku-if-available-3066949-6-alpha2.patch"
       }
     }
   }
