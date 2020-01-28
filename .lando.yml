@@ -18,12 +18,6 @@ config:
   # If ommitted this will be your approot itself.
   webroot: web
 
-  # xdebug - Optional
-  # If you are having trouble getting xdebug to work please see:
-  # https://docs.devwithlando.io/services/php.html#using-xdebug
-  xdebug: true
-
-
 services:
 
   # Solr default version 7.1
@@ -35,7 +29,7 @@ services:
     core: orange_solr
 
     # Dynamically assign a port each time you start your app
-    portforward: true 
+    portforward: true
 
     # Optionally use custom solr config files eg (schema.xml and solrconfig.xml)
     # This is helpful if frameworks require custom config eg Drupal.
@@ -44,19 +38,19 @@ services:
       conf: web/modules/contrib/search_api_solr/solr-conf/7.x
 
 
-  # node default version 8.9 
+  # node default version 8.9
   # https://docs.devwithlando.io/services/node.html
   node:
     type: node
-    run: 
+    run:
       # Installs all requirements for orange_framework/gulpfile.js
       # This should probably be done in a package.json and package.lock in the orange_framework
       - cd $LANDO_MOUNT
-      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename 
+      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename
       - npm install gulp-postcss postcss-easysprites autoprefixer gulp-cli
-      
 
-  mailhog: 
+
+  mailhog:
     type: mailhog
     hogfrom:
       - appserver
@@ -78,3 +72,25 @@ tooling:
     service: node
   gulp:
     service: node
+  # Nginx - xdebug on/off toggling
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for nginx.
+    cmd: docker-php-ext-enable xdebug && pkill -o -USR2 php-fpm
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for nginx.
+    cmd: rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && pkill -o -USR2 php-fpm
+    user: root
+  # Apache - xdebug on/off toggling
+  #xdebug-on:
+  #  service: appserver
+  #  description: Enable xdebug for apache.
+  #  cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+  #  user: root
+  #xdebug-off:
+  #  service: appserver
+  #  description: Disable xdebug for apache.
+  #  cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+  #  user: root
