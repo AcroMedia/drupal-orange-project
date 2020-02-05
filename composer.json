@@ -144,7 +144,6 @@
     "drush/drush": "^9.7.1 | ^10.0.0",
     "recurser/jquery-simple-color": "master",
     "simeydotme/jquery-ui-slider-pips": "v1.11.3",
-    "symfony/event-dispatcher": "4.3.4 as 3.4.99",
     "webflo/drupal-finder": "^1.0.0",
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
