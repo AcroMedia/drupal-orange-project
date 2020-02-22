@@ -13,7 +13,6 @@ proxy:
 services:
   search:
     type: solr
-    core: drupalorange
     portforward: true
 
   node:
