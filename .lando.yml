@@ -16,9 +16,6 @@ services:
     core: drupalorange
     portforward: true
 
-    config:
-      conf: web/modules/contrib/search_api_solr/solr-conf/7.x
-
   node:
     type: node
     run:
