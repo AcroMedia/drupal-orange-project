@@ -11,7 +11,7 @@ proxy:
     - mail.drupal-orange-project.lndo.site
 
 services:
-  index:
+  search:
     type: solr
     core: drupalorange
     portforward: true
