@@ -144,7 +144,6 @@
     "drush/drush": "^9.7.1 | ^10.0.0",
     "recurser/jquery-simple-color": "master",
     "simeydotme/jquery-ui-slider-pips": "v1.11.3",
-    "webflo/drupal-finder": "^1.0.0",
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
@@ -161,25 +160,6 @@
     "platform": {
       "php": "7.2"
     }
-  },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php"
-    ]
-  },
-  "scripts": {
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
   },
   "extra": {
     "composer-exit-on-patch-failure": true,
@@ -209,6 +189,12 @@
       ],
       "drush/Commands/contrib/{$name}": [
         "type:drupal-drush"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
       ]
     },
     "patches": {
@@ -225,7 +211,7 @@
         "No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev": "https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch"
       },
       "drupal/commerce_google_tag_manager": {
-        "Use product variation SKU if available instead of product ID": "https://www.drupal.org/files/issues/2019-11-12/use-product-variation-sku-if-available-3066949-6-alpha2.patch"
+        "Use product variation SKU if available instead of product ID": "https://www.drupal.org/files/issues/2020-03-27/use-product-variation-sku-if-available-3066949-7-alpha3.patch"
       }
     }
   }
