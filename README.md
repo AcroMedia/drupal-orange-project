@@ -58,7 +58,7 @@ Starting a Drupal build that doesn't need Drupal Commerce?
 * Color Field
   * [Issue](https://www.drupal.org/project/color_field/issues/3002836) | [Patch](https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch) - No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev.
 * Commerce Google Tag Manager
-  * [Issue](https://www.drupal.org/project/commerce_google_tag_manager/issues/3066949) | [Patch](https://www.drupal.org/files/issues/2019-07-10/use-product-variation-sku-if-available-3066949-2.patch) - Use product variation SKU if available instead of product ID.
+  * [Issue](https://www.drupal.org/project/commerce_google_tag_manager/issues/3066949) | [Patch](https://www.drupal.org/files/issues/2020-03-27/use-product-variation-sku-if-available-3066949-7-alpha3.patch) - Use product variation SKU if available instead of product ID.
 
 ## Applied Web Libraries
 
@@ -107,13 +107,16 @@ new release of Drupal core.
 
 Follow the steps below to update your core files.
 
-1. Run `composer update drupal/core-recommended drupal/core-dev --with-dependencies` to update Drupal Core and its dependencies.
-2. Run `git diff` to determine if any of the scaffolding files have changed.
+1. Run `composer update drupal/core-recommended --with-dependencies` to update Drupal Core and its dependencies.
+2. Next, apply any required database updates using `drush updb` and clear the cache using `drush cr`.
+3. Make sure to export the config with `drush cex` after the database update because some core updates may change the
+structure of the config files or introduce new values to them. Add the option `--diff` to view actual changes.
+4. Run `git diff` to determine if any of the scaffolding files have changed.
    Review the files for any changes and restore any customizations to
   `.htaccess` or `robots.txt`.
-1. Commit everything all together in a single commit, so `web` will remain in
+5. Commit everything all together in a single commit, so `web` will remain in
    sync with the `core` when checking out branches or running `git bisect`.
-1. In the event that there are non-trivial conflicts in step 2, you may wish
+6. In the event that there are non-trivial conflicts in step 4, you may wish
    to perform these steps on a branch, and use `git merge` to combine the
    updated core files with your customized files. This facilitates the use
    of a [three-way merge tool such as kdiff3](http://www.gitshah.com/2010/12/how-to-setup-kdiff-as-diff-tool-for-git.html). This setup is not necessary if your changes are simple;
