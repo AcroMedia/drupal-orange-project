@@ -8,7 +8,7 @@ config:
 
 proxy:
   mailhog:
-    - mail.drupal-orange-project.lndo.site
+    - mail.orange.lndo.site
 
 services:
   search:
@@ -30,7 +30,26 @@ services:
       - appserver
     portforward: true
 
+  selenium:
+    type: compose
+    services:
+      image: selenium/standalone-chrome:3.141.59-20200326
+      ports:
+        - "4444:4444"
+      volumes:
+        - /dev/shm:/dev/shm
+      command: /opt/bin/entry_point.sh
+
+  acro:
+    type: compose
+    services:
+      image: smmccabe/docker:php7.3
+      command: /opt/bin/entry_point.sh
+
 tooling:
+  nightwatch:
+    service: acro
+    cmd: cd /app/web/core && yarn test:nightwatch
   node:
    service: node
   npm:
