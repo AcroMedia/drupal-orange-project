@@ -13,18 +13,21 @@ proxy:
     - database.orange.lndo.site
 
 services:
+  appserver:
+    build:
+      - composer install
+
   search:
     type: solr
     portforward: true
 
   node:
     type: node
-    run:
-      # Installs all requirements for orange_framework/gulpfile.js
-      # This should probably be done in a package.json and package.lock in the orange_framework
-      - cd $LANDO_MOUNT
-      - npm install gulp gulp-sass gulp-sourcemaps gulp-rename
-      - npm install gulp-postcss postcss-easysprites autoprefixer gulp-cli
+    #build:
+      # Compile custom theme styles.
+      #- cd /app/web/themes/custom/your_custom_theme && npm install && gulp -- sass
+    globals:
+      gulp-cli: latest
 
   mailhog:
     type: mailhog
