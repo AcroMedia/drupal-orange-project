@@ -53,10 +53,6 @@ Starting a Drupal build that doesn't need Drupal Commerce?
   * [Issue](https://www.drupal.org/project/drupal/issues/2771837) | [Patch](https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch) - Problem with CKEditor not maintain data-entity attributes.
 * CKEditor Font Size and Family
   * [Issue](https://www.drupal.org/project/ckeditor_font/issues/2729087) | [Patch](https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch) - Path to plugin is incorrect unless base path is /.
-* CKEditor Color Button
-  * [Issue](https://www.drupal.org/project/colorbutton/issues/2881822) | [Patch](https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch) - Module can't find library in profile directory.
-* Color Field
-  * [Issue](https://www.drupal.org/project/color_field/issues/3002836) | [Patch](https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch) - No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev.
 * Commerce Google Tag Manager
   * [Issue](https://www.drupal.org/project/commerce_google_tag_manager/issues/3066949) | [Patch](https://www.drupal.org/files/issues/2020-03-27/use-product-variation-sku-if-available-3066949-7-alpha3.patch) - Use product variation SKU if available instead of product ID.
 

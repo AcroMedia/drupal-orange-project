@@ -201,12 +201,6 @@
       "drupal/core": {
         "drupalimage CKEditor plugin should not require data-entity-uuid and data-entity-type when image upload is disabled": "https://www.drupal.org/files/issues/2018-09-13/drupalimage_ckeditor-2771837-34.patch"
       },
-      "drupal/ckeditor_font": {
-        "Path to plugin is incorrect unless base path is /": "https://www.drupal.org/files/issues/2018-09-27/2729087_ckeditor_font_file_path.patch"
-      },
-      "drupal/colorbutton": {
-        "Module can't find library in profile directory": "https://www.drupal.org/files/issues/colorbutton-module_can_t_find-2881822-15.patch"
-      },
       "drupal/color_field": {
         "No functionality of the Spectrum widget on Drupal 8.6.x with latest stable or dev": "https://www.drupal.org/files/issues/2018-11-07/no_functionality_of_almost_all_widgets-3002836-7.patch"
       },
