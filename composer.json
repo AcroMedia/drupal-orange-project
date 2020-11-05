@@ -1,6 +1,6 @@
 {
   "name": "acromedia/drupal-orange-project",
-  "description": "Provides a template to create a new Drupal 8 project via Composer.",
+  "description": "Provides a template to create a new Drupal 9 project via Composer.",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "authors": [
@@ -11,19 +11,12 @@
   ],
   "repositories": [
     {
-      "name": "drupal",
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
     {
-      "name": "orange_profile",
       "type": "vcs",
-      "url": "https://github.com/AcroMedia/orange_profile"
-    },
-    {
-      "name": "orange_ecom_profile",
-      "type": "vcs",
-      "url": "https://github.com/AcroMedia/orange_ecom_profile"
+      "url": "https://git.drupalcode.org/project/orange_profile"
     },
     {
       "type": "package",
@@ -106,7 +99,7 @@
         "type": "drupal-library",
         "version": "master",
         "source": {
-          "url": "https://github.com/dimsemenov/Magnific-Popup",
+          "url": "https://github.com/dimsemenov/magnific-popup",
           "type": "git",
           "reference": "origin/master"
         }
@@ -128,27 +121,26 @@
   ],
   "require": {
     "ext-curl": "*",
-    "acromedia/orange_ecom_profile": "dev-8.x-1.x",
-    "acromedia/orange_profile": "dev-8.x-1.x",
+    "drupal/orange_profile": "^2",
     "bgrins/spectrum": "master",
     "ckeditor/ckeditor": "4.11.4",
     "ckeditor/colorbutton": "4.7.3",
     "ckeditor/font": "4.7.3",
     "ckeditor/panelbutton": "4.7.3",
-    "composer/installers": "^1.2",
-    "cweagans/composer-patches": "^1.6.5",
+    "composer/installers": "^1.9",
+    "cweagans/composer-patches": "^1.7",
     "dimsemenov/magnific-popup": "master",
-    "drupal/console": "^1.0.2",
-    "drupal/core-recommended": "^8.8.0",
-    "drupal/core-composer-scaffold": "^8.8.0",
-    "drush/drush": "^9.7.1 | ^10.0.0",
+    "drupal/console": "^1.9",
+    "drupal/core-composer-scaffold": "^9",
+    "drupal/core-project-message": "^9",
+    "drupal/core-recommended": "^9",
+    "drush/drush": "^10",
     "recurser/jquery-simple-color": "master",
     "simeydotme/jquery-ui-slider-pips": "v1.11.3",
     "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
-    "drupal/core-dev": "^8.8.0",
-    "drupal/devel": "^2"
+    "drupal/core-dev": "^9"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -158,7 +150,7 @@
   "config": {
     "sort-packages": true,
     "platform": {
-      "php": "7.2"
+      "php": "7.3"
     }
   },
   "extra": {
