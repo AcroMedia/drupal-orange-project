@@ -24,3 +24,5 @@
 # Ignore sensitive files.
 *.pem
 *.key
+/.editorconfig
+/.gitattributes
