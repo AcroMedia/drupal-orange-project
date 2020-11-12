@@ -3,12 +3,6 @@
   "description": "Provides a template to create a new Drupal 9 project via Composer.",
   "type": "project",
   "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "",
-      "role": ""
-    }
-  ],
   "repositories": [
     {
       "type": "composer",
@@ -103,7 +97,7 @@
         "type": "drupal-library",
         "version": "master",
         "source": {
-          "url": "https://github.com/dimsemenov/magnific-popup",
+          "url": "https://github.com/dimsemenov/Magnific-Popup",
           "type": "git",
           "reference": "origin/master"
         }
@@ -125,8 +119,6 @@
   ],
   "require": {
     "ext-curl": "*",
-    "drupal/orange_profile": "2.0.0-alpha1",
-    "drupal/orange_ecom_profile": "2.0.0-alpha1",
     "bgrins/spectrum": "master",
     "ckeditor/ckeditor": "4.11.4",
     "ckeditor/colorbutton": "4.7.3",
@@ -137,12 +129,11 @@
     "dimsemenov/magnific-popup": "master",
     "drupal/console": "^1.9",
     "drupal/core-composer-scaffold": "^9",
-    "drupal/core-project-message": "^9",
-    "drupal/core-recommended": "^9",
+    "drupal/core": "^9",
+    "drupal/orange_profile": "2.0.0-alpha1",
     "drush/drush": "^10",
     "recurser/jquery-simple-color": "master",
-    "simeydotme/jquery-ui-slider-pips": "v1.11.3",
-    "zaporylie/composer-drupal-optimizations": "^1.0"
+    "simeydotme/jquery-ui-slider-pips": "v1.11.3"
   },
   "require-dev": {
     "drupal/core-dev": "^9"
