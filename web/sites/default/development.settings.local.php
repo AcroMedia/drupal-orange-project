@@ -18,14 +18,21 @@
  * Database configuration.
  */
 $databases['default']['default'] = [
-  'database' => 'drupal8',
-  'username' => 'drupal8',
-  'password' => 'drupal8',
+  'database' => 'drupal9',
+  'username' => 'drupal9',
+  'password' => 'drupal9',
   'host' => 'database',
   'port' => '',
   'driver' => 'mysql',
   'prefix' => '',
 ];
+
+/**
+ * Swiftmailer.
+ */
+$config['swiftmailer.transport']['transport'] = 'smtp';
+$config['swiftmailer.transport']['smtp_host'] = 'mailhog';
+$config['swiftmailer.transport']['smtp_port'] = '1025';
 
 /**
  * File system.
@@ -42,7 +49,7 @@ $config['system.logging']['error_level'] = 'verbose';
 /**
  * Enable local development services.
  */
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/default/development.services.local.yml';
 
 /**
  * Aggregation and caching.
@@ -58,6 +65,7 @@ $config['advagg.settings']['enabled'] = FALSE;
  */
 $config['search_api.server.solr']['backend_config']['connector_config']['host'] = 'search';
 $config['search_api.server.solr']['backend_config']['connector_config']['port'] = '8983';
+$config['search_api.server.solr']['backend_config']['connector_config']['core'] = 'orange';
 
 /**
  * Email rerouting.

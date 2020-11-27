@@ -2,13 +2,14 @@ name: orange
 recipe: drupal9
 config:
   php: 7.3
-
   via: nginx
   webroot: web
 
 proxy:
   mailhog:
     - mail.orange.lndo.site
+  search:
+    - solr.orange.lndo.site:8983
 
 services:
   appserver:
@@ -16,14 +17,20 @@ services:
       - composer install
 
   search:
-    type: solr
+    type: solr:8
+    core: orange
     portforward: true
+    # Export the site solr config and commit to the project.
+    # Can be exported from: /admin/config/search/search-api/server/solr/solr_configset/config-zip
+    # Uncomment and set the path to the exported config below.
+    #config:
+      #dir: solr_conf
 
   node:
     type: node
-    #build:
-      # Compile custom theme styles.
-      #- cd /app/web/themes/custom/your_custom_theme && npm install && gulp -- sass
+    build:
+      # Compile theme styles.
+      - cd /app/web/themes/contrib/orange_starter && npm install && gulp -- sass
     globals:
       gulp-cli: latest
 
